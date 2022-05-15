@@ -13,7 +13,7 @@ var totalram = `${Math.round(os.totalmem / 1024 / 1024)}`
 var ramDipake = totalram-sisaram
 const defaultMenu = {
     before: `
-╭──『 _*BOTCAHX*_ 』──⬣
+┏──『 _*BOTWEA*_ 』──⬣
 │⬡ *Hai*, %name!
 │
 │⬡ *Tersisa* : %limit Limit
@@ -31,10 +31,10 @@ const defaultMenu = {
 │⬡ *Memory Used* : ${ramDipake}MB / ${totalram}MB
 │⬡ *Instagram* :
 │⬡ https://instagram.com/mursid.st
-╰───────────⬣`.trimStart(),
-    header: '╭──〘 %category 〙──⬣',
+┗───────────⬣`.trimStart(),
+    header: '┏──『 %category 』──⬣',
     body: '│⬡%cmd %islimit %isPremium',
-    footer: '╰───────⬣\n',
+    footer: '┗──────⬣\n',
     after: `
 %npmname@^%version
 ${'%npmdesc'}
@@ -234,7 +234,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "listMessage": {
                     "title": `${ucapan()}, ${name}`.trim(),
                     "description": `
-╭──『 _*Status Bot*_ 』──⬣
+┏──『 _*Status Bot*_ 』──⬣
 │⬡ *Aktif selama* : ${uptime}
 │⬡ *Baterai* : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 │⬡ *Pengguna* : ${Object.keys(global.db.data.users).length}
@@ -242,9 +242,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 │⬡ *Terblock* : ${conn.blocklist.length} 
 │⬡ *Chat Terbanned* : ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}
 │⬡ *Pengguna Terbanned* : ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}
-╰───────────⬣`.trim(),
-                        "footerText": "© _*BOTCAHX*_",
-                        "buttonText": "*Klik Disini*",
+┗──────────⬣`.trim(),
+                        "footerText": "© _*BOTWEA*_",
+                        "buttonText": "*Click Here*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
