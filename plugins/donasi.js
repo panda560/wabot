@@ -9,9 +9,9 @@ let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fet
 │⬡ *088233832771*
 ╰─────────⬣
 ╭─「 *NOTE* 」
-│ > Ingin donasi? Wa.me/6288233832771
+│ > Owner? wa.me/6288233832771
 │ _Hasil donasi akan digunakan buat sewa_
-│ _atau beli *RDP/VPS/PANEL* agar bot bisa jalan_
+│ _atau beli *RDP/VPS* agar bot bisa jalan_
 │ _24jam tanpa kendala_
 ╰──────────⬣
 `.trim(), footer, 'Owner', '.owner')
