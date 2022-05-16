@@ -11,9 +11,9 @@
 // thank you to ALL Bot creator
 // and thanks you to who support my Bot
 
-gc1 = ''
-gc2 = ''
-gc3 = ''
+gc1 = 'https://chat.whatsapp.com/LPFQ2X1cnihB0fb8F8cZau'
+gc2 = 'https://chat.whatsapp.com/HjRHck1G3WRHOx97fJkdMN'
+gc3 = 'https://chat.whatsapp.com/HcGcIB09sIvKrGytO8yfFn'
 global.linkGC = ['https://chat.whatsapp.com/LPFQ2X1cnihB0fb8F8cZau', ''] // ganti jadi group lu
 global.owner = ['6289612698583','6288233832771'] // Put your number here //owner eval
 global.kontak = ['6289612698583','6288233832771'] //Ketika ada yang ngetik #owner
@@ -48,11 +48,11 @@ xteamkey = 'Dawnfrostkey'
 //xteam        MIMINETBOT
 namaig = 'mursid.st'
 namagithub = 'Botwa021'
-kasihcaption = `Follow Ig @mursid.st`
+kasihcaption = `Instagram.com/mursid.st`
 namakontak1 = '𝙼𝚞𝚛𝚜𝚒𝚍 𝙱𝙾𝚃'
 namakontak2 = '𝙼𝚞𝚛𝚜𝚒𝚍'
 
-//kasihcaption = `Follow Ig @mursid.st`
+//kasihcaption = `Instagram.com/mursid.st`
 
 // Sticker WM
 global.packname = 'мυяѕι∂' // ganti aja
@@ -60,22 +60,22 @@ global.author = 'ʙᴏᴛ' // ganti aja
 
 //yyy
 bc = 'мυяѕι∂' //мυяѕι∂ Broadcast
-footer = `\n© _*BOTCAHX*_`
+footer = `\n© _*MursidBot*_`
 namabot = `WhatsApp Bot`
 namalu = 'MursidGanteng'
 
 
 // 
-wait = '_*Wait...*_'
-global.wait = '_*Wait...*_'
+wait = '_*Loading...*_'
+global.wait = '_*Loading...*_'
 global.rpg = 'Fitur Rpg Dimatikan\nKetik *!enable* *rpg* untuk menggunakan fitur ini!\nKalo Mau main Disini aja\nhttps://chat.whatsapp.com/FnNAbem8o6r4pgLhSdO8Q9'
 global.nsfw = 'Fitur NSFW Dimatikan\nKetik *!enable* *nsfw* untuk menggunakan fitur ini!\n“Katakanlah kepada orang laki-laki yang beriman: Hendaklah mereka menahan pandanganya, dan memelihara kemaluannya; … Katakanlah kepada wanita yang beriman: Hendaklah mereka menahan pandangannya, dan kemaluannya, dan janganlah mereka Menampakkan perhiasannya, kecuali yang (biasa) nampak dari padany,” \n(TQS. Al-Nur [24]: 30-31).'
 global.eror = '_*Server Error kak*_'
 
-global.image = "https://telegra.ph/file/6f1b396c089ed57b85d8b.jpg"
+global.image = "https://telegra.ph/file/31701c03ffd465963a2cf.jpg"
 
 // Ubah saja SC dari MursidXzy
-global.image = 'https://telegra.ph/file/6f1b396c089ed57b85d8b.jpg'//thumbnail
+global.image = 'https://telegra.ph/file/31701c03ffd465963a2cf.jpg'//thumbnail
 
 // tingkat kesulitan, semakin tinggi semakin susah
 global.multiplier = 36 // The higher, The harder levelup
