@@ -507,7 +507,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
 await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
  conn.send3ButtonImg(m.chat, await (await fetch(image)).buffer(), text.trim(), `*Runtime* *${uptime}*\n*${week} ${date}*\n*Created By* @⁨6288233832771`, 'ρємιℓιк вσт', '.owner', 'ɪɴƒᴏ мυʀѕι∂', '.infomursid', 'ʀυℓєѕ', '.rules', m, { contextInfo: {
-mentionedJid: ['6288233832771@s.whatsapp.net']
+{ mention: ['6288233832771@s.whatsapp.net'] }
 }
 })
         await conn.sendFile(m.chat, bzz, 'bzz.opus', null, m, true)
