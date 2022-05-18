@@ -10,7 +10,7 @@ const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const os = require('os')
 var sisaram = `${Math.round(os.freemem / 1024 / 1024)}`
 var totalram = `${Math.round(os.totalmem / 1024 / 1024)}`
-var ramDipake = totalram-sisaram
+var ramDipake = totalram - sisaram
 const defaultMenu = {
     before: `
 ┏──『 _*MursidBot*_ 』──⬣
@@ -231,230 +231,231 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         })
         if (teks == '404') {
             let mens = global.conn.user.jid
-                return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
-                  "listMessage": {
+            return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
+                "listMessage": {
                     "title": `${ucapan()}, ${name}`.trim(),
                     "description": `
 ┏──『 _*Status Bot*_ 』──⬣
-│⬡ *Aktif selama* : ${uptime}
-│⬡ *Baterai* : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charger' : ''}` : 'tidak diketahui'}
-│⬡ *Pengguna* : ${Object.keys(global.db.data.users).length}
-│⬡ *Jadibot* : ${totaljadibot.length}
-│⬡ *Terblock* : ${conn.blocklist.length} 
-│⬡ *Chat Terbanned* : ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}
-│⬡ *Pengguna Terbanned* : ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}
+│⬡ Aktif selama : ${uptime}
+│⬡ Baterai : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charger' : ''}` : 'tidak diketahui'}
+│⬡ Pengguna : ${Object.keys(global.db.data.users).length}
+│⬡ Jadibot : ${totaljadibot.length}
+│⬡ Terblock : ${conn.blocklist.length} 
+│⬡ Chat Terbanned : ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}
+│⬡ Pengguna Terbanned : ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}
 ┗──────────⬣
 ┏──『 _*Bot Info*_ 』──⬣
-│⬡ *Version* :  ${conn.browserDescription[2]}
-│⬡ *Browser* : ${conn.browserDescription[1]}
-│⬡ *Host Number* : @${global.conn.user.jid.split('@')[0]}
-│⬡ *Web Name* : ${conn.browserDescription[0]}
-│⬡ *Platform* : Unbuntu Linux
+│⬡ Version :  ${conn.browserDescription[2]}
+│⬡ Browser : ${conn.browserDescription[1]}
+│⬡ Host Number : @${global.conn.user.jid.split('@')[0]}
+│⬡ Web Name : ${conn.browserDescription[0]}
+│⬡ Platform : Unbuntu Linux
 ┗──────────⬣`.trim(),
-                        "footerText": "© _*MursidBot*_",
-                        "buttonText": "*Click Here*",
-                        "listType": "SINGLE_SELECT",
-                        "sections": [
-                            {
-                                "rows": [{
-                                    "title": "Status Bot",
-                                    "description": "Status dan informasi Bot.",
-                                    "rowId": ".botstatus"
-                                }, {
-                                    "title": "Rules",
-                                    "description": "User yang bijak selalu mematuhi Rules.",
-                                    "rowId": ".rules"
-                                }, {
-                                    "title": "Info Mursid",
-                                    "description": "Info Tentang Owner Bot",
-                                    "rowId": ".infomursid"
-                                }, {
-                                    "title": "Donasi",
-                                    "description": "Hasil donasi akan digunakan buat sewa atau beli *RDP/VPS* agar bot bisa berjalan 24 jam tanpa ada kendala",
-                                    "rowId": ".donasi"
-                                }, {
-                                    "title": "Sewa bot - Premium",
-                                    "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
-                                    "rowId": ".sewabot"
-                                }],
-                                "title": "⬡────────────❲ Menu All ❳────────────⬡"
+                    "footerText": "_*© MursidBot*_",
+                    "buttonText": "Click Here",
+                    "listType": "SINGLE_SELECT",
+                    "sections": [
+                        {
+                            "rows": [{
+                                "title": "Status Bot",
+                                "description": "Status dan informasi Bot.",
+                                "rowId": ".botstatus"
                             }, {
-                                "rows": [{
-                                    "title": `[🧾| Semua Perintah`,
-                                    "description": "Memberikan Semua Fitur Bot",
-                                    "rowId": ".? all"
-                                }, { 
-                                    "title": "|🕋| Islam",
-                                    "description": "Menu Tentang Islam",
-                                    "rowId": ".? quran"
-                                }, { 
-                                    "title": "|🏫| Edukasi",
-                                    "description": "Menu Edukasi",
-                                    "rowId": ".? edukasi"
-                                }, { 
-                                    "title": "|📰| News",
-                                    "description": "Menu Berita",
-                                    "rowId": ".? News"
-                                }, { 
-                                    "title": "|🎮| Game",
-                                    "description": "Menu Game",
-                                    "rowId": ".? game"
-                                }, { 
-                                    "title": "|🗺️| Epic Rpg",
-                                    "description": "Menu Game RPG",
-                                    "rowId": ".? rpg"
-                                }, { 
-                                    "title": "|📈| XP",
-                                    "description": "XP Dan Level",
-                                    "rowId": ".? xp"
-                                }, { 
-                                    "title": "|🔞| NSFW",
-                                    "description": "Menu Bokep",
-                                    "rowId": ".? nsfw"
-                                }, { 
-                                    "title": "|🖼️| Random Image",
-                                    "description": "Menu Foto Random",
-                                    "rowId": ".? image"
-                                }, { 
-                                    "title": "|🎇| Stiker",
-                                    "description": "Menu Buat Stiker",
-                                    "rowId": ".? stiker"
-                                }, { 
-                                    "title": "|🐚| Kerang Ajaib",
-                                    "description": "Menurut Kerang ajaib....",
-                                    "rowId": ".? kerangajaib"
-                                }, { 
-                                    "title": "|📑| Quotes",
-                                    "description": "Menu Quotes",
-                                    "rowId": ".? quotes"
-                                }, { 
-                                    "title": "|🏛️| Admin",
-                                    "description": "Menu Admin Group",
-                                    "rowId": ".? admin"
-                                }, { 
-                                    "title": "|🏢| Grup",
-                                    "description": "Menu Group",
-                                    "rowId": ".? grup"
-                                }, { 
-                                    "title": "|🔝| Premium",
-                                    "description": "Menu Untuk User Premium",
-                                    "rowId": ".? premium"
-                                }, { 
-                                    "title": "|🖥️| Internet",
-                                    "description": "Cari Sesuatu Di Bot",
-                                    "rowId": ".? internet"
-                                }, { 
-                                    "title": "|🥷| Anonymous",
-                                    "description": "Mainkan Anonymous Chat",
-                                    "rowId": ".? anonymous"
-                                }, { 
-                                    "title": "|✒️| Nulis & Logo",
-                                    "description": "Menu Nulis & Logo",
-                                    "rowId": ".? nulis"
-                                }, { 
-                                    "title": "|📺| Downloader",
-                                    "description": "Download Sesuatu Di Bot",
-                                    "rowId": ".? downloader"
-                                }, { 
-                                    "title": "|🔧| Tools",
-                                    "description": "Tools Yang Bisa di Gunakan Di Bot",
-                                    "rowId": ".? tools"
-                                }, { 
-                                    "title": "|🎇| Fun",
-                                    "description": "Menu Ceria",
-                                    "rowId": ".? fun"
-                                }, { 
-                                    "title": "|📂| Database",
-                                    "description": "Simpan Sesuatu Di Bot",
-                                    "rowId": ".? database"
-                                }, { 
-                                    "title": "|📝| Vote & Absen",
-                                    "description": "Menu Vote & Absen",
-                                    "rowId": ".? vote"
-                                }, { 
-                                    "title": "|🎙️| Pengubah Suara",
-                                    "description": "Ubah Suaramu",
-                                    "rowId": ".? audio"
-                                }, { 
-                                    "title": "|🤖| Jadi Bot",
-                                    "description": "Jadi Bot",
-                                    "rowId": ".? jadibot"
-                                }, { 
-                                    "title": "|⛩️| Anime",
-                                    "description": "Cari Anime Di Bot",
-                                    "rowId": ".? anime"
-                                }, { 
-                                    "title": "|ℹ️| Info",
-                                    "description": "Info Tentang Bot",
-                                    "rowId": ".? info"
-                                }, { 
-                                    "title": "|🌴|Tanpa Kategori",
-                                    "description": "Menu Tanpa Kategori/Belum Update",
-                                    "rowId": ".? tanpakategori"
-                                }, { 
-                                    "title": "|🧑‍💻| Owner",
-                                    "description": "Menu Khusu Owner",
-                                    "rowId": ".? owner"
-                                }],
-                                "title": "⬡─────────❲ Tentang Bot dan lainnya ❳─────────⬡"
+                                "title": "Rules",
+                                "description": "User yang bijak selalu mematuhi Rules.",
+                                "rowId": ".rules"
                             }, {
-                                "rows": [{
-                                    "title": "Owner bot",
-                                    "description": "Pemilik Mursid S",
-                                    "rowId": ".owner"
-                                }, {
-                                    "title": "Donasi",
-                                    "description": "Jangan lupa donasi untuk mendukung bot agar aktif selalu",
-                                    "rowId": ".donasi"
-                                }, {
-                                    "title": "Kata penutup",
-                                    "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
-                                    "rowId": ".creator"
-                                }, {
-                                    "title": "Thanks To |🎖️|",
-                                    "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
-                                    "rowId": ".tqto"
-                                }],
-                                "title": "⬡────────────❲ Penutup ❳────────────⬡"
-                            }
-                        ], "contextInfo": 
-						{ "stanzaId": m.key.id,
+                                "title": "Info Mursid",
+                                "description": "Info Tentang Owner Bot",
+                                "rowId": ".infomursid"
+                            }, {
+                                "title": "Donasi",
+                                "description": "Hasil donasi akan digunakan buat sewa atau beli RDP/VPS agar bot bisa berjalan 24 jam tanpa ada kendala",
+                                "rowId": ".donasi"
+                            }, {
+                                "title": "Sewa bot - Premium",
+                                "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
+                                "rowId": ".sewabot"
+                            }],
+                            "title": "⬡────────────❲ Menu All ❳────────────⬡"
+                        }, {
+                            "rows": [{
+                                "title": `[🧾| Semua Perintah`,
+                                "description": "Memberikan Semua Fitur Bot",
+                                "rowId": ".? all"
+                            }, {
+                                "title": "|🕋| Islam",
+                                "description": "Menu Tentang Islam",
+                                "rowId": ".? quran"
+                            }, {
+                                "title": "|🏫| Edukasi",
+                                "description": "Menu Edukasi",
+                                "rowId": ".? edukasi"
+                            }, {
+                                "title": "|📰| News",
+                                "description": "Menu Berita",
+                                "rowId": ".? News"
+                            }, {
+                                "title": "|🎮| Game",
+                                "description": "Menu Game",
+                                "rowId": ".? game"
+                            }, {
+                                "title": "|🗺️| Epic Rpg",
+                                "description": "Menu Game RPG",
+                                "rowId": ".? rpg"
+                            }, {
+                                "title": "|📈| XP",
+                                "description": "XP Dan Level",
+                                "rowId": ".? xp"
+                            }, {
+                                "title": "|🔞| NSFW",
+                                "description": "Menu Bokep",
+                                "rowId": ".? nsfw"
+                            }, {
+                                "title": "|🖼️| Random Image",
+                                "description": "Menu Foto Random",
+                                "rowId": ".? image"
+                            }, {
+                                "title": "|🎇| Stiker",
+                                "description": "Menu Buat Stiker",
+                                "rowId": ".? stiker"
+                            }, {
+                                "title": "|🐚| Kerang Ajaib",
+                                "description": "Menurut Kerang ajaib....",
+                                "rowId": ".? kerangajaib"
+                            }, {
+                                "title": "|📑| Quotes",
+                                "description": "Menu Quotes",
+                                "rowId": ".? quotes"
+                            }, {
+                                "title": "|🏛️| Admin",
+                                "description": "Menu Admin Group",
+                                "rowId": ".? admin"
+                            }, {
+                                "title": "|🏢| Grup",
+                                "description": "Menu Group",
+                                "rowId": ".? grup"
+                            }, {
+                                "title": "|🔝| Premium",
+                                "description": "Menu Untuk User Premium",
+                                "rowId": ".? premium"
+                            }, {
+                                "title": "|🖥️| Internet",
+                                "description": "Cari Sesuatu Di Bot",
+                                "rowId": ".? internet"
+                            }, {
+                                "title": "|🥷| Anonymous",
+                                "description": "Mainkan Anonymous Chat",
+                                "rowId": ".? anonymous"
+                            }, {
+                                "title": "|✒️| Nulis & Logo",
+                                "description": "Menu Nulis & Logo",
+                                "rowId": ".? nulis"
+                            }, {
+                                "title": "|📺| Downloader",
+                                "description": "Download Sesuatu Di Bot",
+                                "rowId": ".? downloader"
+                            }, {
+                                "title": "|🔧| Tools",
+                                "description": "Tools Yang Bisa di Gunakan Di Bot",
+                                "rowId": ".? tools"
+                            }, {
+                                "title": "|🎇| Fun",
+                                "description": "Menu Ceria",
+                                "rowId": ".? fun"
+                            }, {
+                                "title": "|📂| Database",
+                                "description": "Simpan Sesuatu Di Bot",
+                                "rowId": ".? database"
+                            }, {
+                                "title": "|📝| Vote & Absen",
+                                "description": "Menu Vote & Absen",
+                                "rowId": ".? vote"
+                            }, {
+                                "title": "|🎙️| Pengubah Suara",
+                                "description": "Ubah Suaramu",
+                                "rowId": ".? audio"
+                            }, {
+                                "title": "|🤖| Jadi Bot",
+                                "description": "Jadi Bot",
+                                "rowId": ".? jadibot"
+                            }, {
+                                "title": "|⛩️| Anime",
+                                "description": "Cari Anime Di Bot",
+                                "rowId": ".? anime"
+                            }, {
+                                "title": "|ℹ️| Info",
+                                "description": "Info Tentang Bot",
+                                "rowId": ".? info"
+                            }, {
+                                "title": "|🌴|Tanpa Kategori",
+                                "description": "Menu Tanpa Kategori/Belum Update",
+                                "rowId": ".? tanpakategori"
+                            }, {
+                                "title": "|🧑‍💻| Owner",
+                                "description": "Menu Khusu Owner",
+                                "rowId": ".? owner"
+                            }],
+                            "title": "⬡─────────❲ Tentang Bot dan lainnya ❳─────────⬡"
+                        }, {
+                            "rows": [{
+                                "title": "Owner bot",
+                                "description": "Pemilik Mursid S",
+                                "rowId": ".owner"
+                            }, {
+                                "title": "Donasi",
+                                "description": "Jangan lupa donasi untuk mendukung bot agar aktif selalu",
+                                "rowId": ".donasi"
+                            }, {
+                                "title": "Kata penutup",
+                                "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
+                                "rowId": ".creator"
+                            }, {
+                                "title": "Thanks To |🎖️|",
+                                "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
+                                "rowId": ".tqto"
+                            }],
+                            "title": "⬡────────────❲ Penutup ❳────────────⬡"
+                        }
+                    ], "contextInfo":
+                    {
+                        "stanzaId": m.key.id,
                         "participant": "0@s.whatsapp.net",
                         "remoteJid": "6283136505591-1614953337@g.us",
                         "mentionedJid": [mens],
                         "quotedMessage": m.message
-						}
                     }
-                 }, {}), {waitForAck: true})
-    }
-    // gunakan ini jika kamu menggunakan whatsapp bisnis
-    //   throw `
-    // ┌〔 DAFTAR MENU 〕
-    // ├ ${_p + command} all
-    // ├ ${_p + command} game
-    // ├ ${_p + command} xp
-    // ├ ${_p + command} stiker
-    // ├ ${_p + command} kerang
-    // ├ ${_p + command} quotes
-    // ├ ${_p + command} admin
-    // ├ ${_p + command} group
-    // ├ ${_p + command} premium
-    // ├ ${_p + command} internet
-    // ├ ${_p + command} anonymous
-    // ├ ${_p + command} nulis
-    // ├ ${_p + command} downloader
-    // ├ ${_p + command} tools
-    // ├ ${_p + command} fun
-    // ├ ${_p + command} database
-    // ├ ${_p + command} vote
-    // ├ ${_p + command} quran
-    // ├ ${_p + command} audio
-    // ├ ${_p + command} jadibot
-    // ├ ${_p + command} info
-    // ├ ${_p + command} tanpa kategori
-    // ├ ${_p + command} owner
-    // └────  
-    //     `.trim()
+                }
+            }, {}), { waitForAck: true })
+        }
+        // gunakan ini jika kamu menggunakan whatsapp bisnis
+        //   throw `
+        // ┌〔 DAFTAR MENU 〕
+        // ├ ${_p + command} all
+        // ├ ${_p + command} game
+        // ├ ${_p + command} xp
+        // ├ ${_p + command} stiker
+        // ├ ${_p + command} kerang
+        // ├ ${_p + command} quotes
+        // ├ ${_p + command} admin
+        // ├ ${_p + command} group
+        // ├ ${_p + command} premium
+        // ├ ${_p + command} internet
+        // ├ ${_p + command} anonymous
+        // ├ ${_p + command} nulis
+        // ├ ${_p + command} downloader
+        // ├ ${_p + command} tools
+        // ├ ${_p + command} fun
+        // ├ ${_p + command} database
+        // ├ ${_p + command} vote
+        // ├ ${_p + command} quran
+        // ├ ${_p + command} audio
+        // ├ ${_p + command} jadibot
+        // ├ ${_p + command} info
+        // ├ ${_p + command} tanpa kategori
+        // ├ ${_p + command} owner
+        // └────  
+        //     `.trim()
         let groups = {}
         for (let tag in tags) {
             groups[tag] = []
@@ -505,11 +506,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         }
         text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
- conn.send3ButtonImg(m.chat, await (await fetch(image)).buffer(), text.trim(), `*Runtime* *${uptime}*\n*${week} ${date}*\n*Created By* @⁨6288233832771`, 'ρємιℓιк вσт', '.owner', 'ɪɴƒᴏ мυʀѕι∂', '.infomursid', 'ʀυℓєѕ', '.rules', m, { contextInfo: {
-{ mention: ['6288233832771@s.whatsapp.net'] }
-}
-})
+        await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
+        conn.send3ButtonImg(m.chat, await (await fetch(image)).buffer(), text.trim(), `*Runtime ${uptime}*\n*${week} ${date}*\n*Created By @⁨6288233832771*`, 'ρємιℓιк вσт', '.owner', 'ɪɴƒᴏ мυʀѕι∂', '.infomursid', 'ʀυℓєѕ', '.rules', m, { mentions: ['6288233832771@s.whatsapp.net'] })
         await conn.sendFile(m.chat, bzz, 'bzz.opus', null, m, true)
         await conn.sendFile(m.chat, bzz2, 'bzz2.opus', null, m, true)
     } catch (e) {
