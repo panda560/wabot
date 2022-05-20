@@ -13,7 +13,7 @@ var totalram = `${Math.round(os.totalmem / 1024 / 1024)}`
 var ramDipake = totalram - sisaram
 const defaultMenu = {
     before: `
-┏──『 _*MursidBot*_ 』──⬣
+┏──『 _*PB BOT*_ 』──⬣
 │⬡ *Hai*, %name!
 │
 │⬡ *Tersisa* : %limit Limit
@@ -29,8 +29,6 @@ const defaultMenu = {
 │⬡ *Uptime* : %uptime
 │⬡ *Database* : %rtotalreg dari %totalreg
 │⬡ *Memory Used* : ${ramDipake}MB / ${totalram}MB
-│⬡ *Instagram* :
-│⬡ https://instagram.com/mursid.st
 ┗───────────⬣`.trimStart(),
     header: '┏──『 %category 』──⬣',
     body: '│⬡%cmd %islimit %isPremium',
@@ -251,7 +249,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 │⬡ Web Name : ${conn.browserDescription[0]}
 │⬡ Platform : Unbuntu Linux
 ┗──────────⬣`.trim(),
-                    "footerText": "_*© MursidBot*_",
+                    "footerText": "_*© PB BOT*_",
                     "buttonText": "Click Here",
                     "listType": "SINGLE_SELECT",
                     "sections": [
