@@ -1,19 +1,18 @@
-const { MessageType } = require('@adiwajshing/baileys')
-const PhoneNumber = require('awesome-phonenumber')
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-  await conn.sendMessage(m.chat, {
-    contacts: [{
-    "displayName": "ᴏᴡɴᴇʀ",
-      "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:mursid-bot;Owner;;;\nFN:Creator Faiz ԅ( ͒ ۝ ͒ )ᕤ\nitem1.TEL;waid=6281273677810:6281273677810\nitem1.X-ABLabel:📍 Owner\nitem2.EMAIL;type=INTERNET:akunsesi021@gmail.com\nitem2.X-ABLabel:💌 Email\nitem3.URL:https://hardianto.xyz/\nitem3.X-ABLabel:📮 Rest Api\nitem4.ADR:;;🇮🇩 Indonesia;;;;\nitem4.X-ABADR:ac\nitem4.X-ABLabel:🌍 Region | Lampung 🇮🇩\nitem5.X-ABLabel:───────[ PB BOT ]───────\nEND:VCARD"
-  }, {
-    "displayName": "ᴏᴡɴᴇʀ",
-      "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Run;Jasa;;;\nFN:+62 882-3383-2771\nitem1.TEL;waid=6288233832771:6288233832771\nitem1.X-ABLabel:📍 Owner\nitem2.EMAIL;type=INTERNET:mursidmulo@gmail.com\nitem2.X-ABLabel:💌 Email\nitem3.URL:donasi chat owner ya></\nitem3.X-ABLabel:📮 Rest Api\nitem4.ADR:;;🇮🇩 Indonesia;;;;\nitem4.X-ABADR:ac\nitem4.X-ABLabel:🌍 Region | Indonesia 🇮🇩\nitem5.X-ABLabel:───────[ PB BOT ]───────\nEND:VCARD"
-  }]
-  }, MessageType.contactsArray, { quoted: m })
+let handler = async(m, { conn }) => {
+  let name = m.sender
+  let fkonn = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '6282117332347@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${await conn.getName(name)}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+  try {
+  const sentMsg = await conn.sendContactArray(m.chat, [
+    [`${owner[0]}`, `${await conn.getName(owner[0]+'@s.whatsapp.net')}`, `👑 Developer Bot `, `🚫 Don't call me 🥺`, `riogans011@gmail.com`, `🇮🇩 Indonesia`, `🚀 https://instagram.com/riosapuuttrraa_?igshid=YmMyMTA2M2Y= `, `👤 Gada pawang nih senggol dong 😔`],
+  ], fkonn) 
+  await conn.reply(m.chat, `Halo kak @${m.sender.split(`@`)[0]} itu nomor ownerku , jangan di spam ya ka😉`, sentMsg, {mentions: [m.sender]})
+  } catch {
+  const sentMsg = await conn.sendContact(m.chat, `${owner[0]}`, `${await conn.getName(owner[0]+'@s.whatsapp.net')}`, m) 
+  await conn.reply(m.chat, `Halo kak @${m.sender.split(`@`)[0]} itu nomor team developerku, jangan di apa-apain ya kak😖`, sentMsg, {mentions: [m.sender]})
+  }
 }
-handler.help = ['owner', 'creator']
+handler.help = ['owner']
 handler.tags = ['info']
-
 handler.command = /^(owner)$/i
 
 module.exports = handler
