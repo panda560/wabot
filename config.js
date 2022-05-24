@@ -15,11 +15,11 @@
 gc1 = 'https://chat.whatsapp.com/LPFQ2X1cnihB0fb8F8cZau'
 gc2 = 'https://chat.whatsapp.com/HjRHck1G3WRHOx97fJkdMN'
 gc3 = 'https://chat.whatsapp.com/HcGcIB09sIvKrGytO8yfFn'
-global.linkGC = ['https://chat.whatsapp.com/LPFQ2X1cnihB0fb8F8cZau', ''] // ganti jadi group lu
-global.owner = ['6281273677810','6288233832771'] // Put your number here //owner eval
-global.kontak = ['6281273677810','6288233832771'] //Ketika ada yang ngetik #owner
-global.mods = ['0'] // Want some help?
-global.prems = ['+1 (775) 403-5736','6289505165400','6282287750102'] // Premium user has unlimited limit
+global.linkGC = ['https://chat.whatsapp.com/ESqebgPcyUMHWUh48pcQlb', ''] // ganti jadi group lu
+global.owner = ['6282117332347','6281273677810'] // Put your number here //owner eval
+global.kontak = ['6282117332347','6281273677810'] //Ketika ada yang ngetik #owner
+global.mods = [] // Want some help?
+global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com', 
@@ -56,14 +56,14 @@ namakontak2 = '𝙼𝚞𝚛𝚜𝚒𝚍'
 //kasihcaption = `Instagram.com/mursid.st`
 
 // Sticker WM
-global.packname = 'PB BOT' // ganti aja
-global.author = 'FAISBOT' // ganti aja
+global.packname = 'made by' // ganti aja
+global.author = 'Rio Saputra' // ganti aja
 
 //yyy
-bc = 'мυяѕι∂' //мυяѕι∂ Broadcast
+bc = 'Whatsapp Bot' //WhatsApp Bot Broadcast
 footer = `\n© _*PB BOT*_`
 namabot = `WhatsApp Bot`
-namalu = 'MursidGanteng'
+namalu = 'Rio Saputra'
 
 
 // 
