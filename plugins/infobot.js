@@ -21,13 +21,13 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ╠➥ *Total user:* ${totalreg} *user*
 ╠➥ *Uptime:* ${uptime}
 ║
-╠═〘 Donasi • Pulsa • Dana 〙 ═
-╠➥ DANA [088233832771]
-╠➥ Tri [089612698583]
-╠➥ Smartfren [088233832771]
+╠═〘 Donasi • Pulsa • 〙 ═
+╠➥ Telkomsel [082119094904]
+╠➥ Mau donasi? wa.me/6282117332347 
+╠➥ terimakasih yang sudah berdonasi
 ║
 ║${readMore}
-╠═〘 Rules Bot Mursid 〙 ═
+╠═〘 Rules Bot 〙 ═
 ╠➥ *KAMI TIDAK BERTANGGUNG*
 ║   *JAWAB ATAS PENYALAH*
 ║   *GUNAAN BOT*
@@ -41,11 +41,11 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ║ 
 ╠═ ©2022 ${package.name}
 ╠═ Scrip original by Norutomo
-╠═ Creator : Mursid
+╠═ Creator : Rio
 ╠═ Api xsteam :St4r
 ╠═ Resta
 ╠═ Ariq
-╠═〘 MursidXzy 〙 ═`.trim()
+╠═〘 Rio 〙 ═`.trim()
      await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, 'wabot-aq', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['infobot']
