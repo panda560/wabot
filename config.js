@@ -60,9 +60,9 @@ global.packname = 'made by' // ganti aja
 global.author = 'Faizganz' // ganti aja
 
 //yyy
-bc = 'Whatsapp Bot' //WhatsApp Bot Broadcast
+bc = 'PB BOT' //WhatsApp Bot Broadcast
 footer = `\n© _*PB BOT*_`
-namabot = `WhatsApp Bot`
+namabot = `PB BOT`
 namalu = 'Faizganz'
 
 
@@ -93,3 +93,4 @@ fs.watchFile(file, () => {
   delete require.cache[file]
   require(file)
 })
+
